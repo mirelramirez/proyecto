@@ -154,9 +154,39 @@ $(window).load(function() {
     
     <div class="limpiar"></div>
 </div> <!-- end of main -->
+
+
+
         
 <div id="tooplate_footer_wrapper">
 	<div id="tooplate_footer">
+	 
+	 
+	              API
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="API.JS"></script>
+
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Consumo', 'Porciento'],
+          ['Galeria',     60],
+          ['Proyectos',     30],
+          ['Noticias',  10]
+        ]);
+         var options = {
+          title: 'Mi consumo del café, cigarro y ron',
+          is3D: true,};
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>	
+<div id="piechart" style="width:400px;height:300px;"></div>
+<script type="text/API.JS" src="https://www.google.com/jsapi"></script>
+
+	 
     	
         Copyright © 2048 <a href="#">Company Name</a> - Design: <b><a href="http://www.tooplate.com"><span class="orange">too</span><span class="green">plate</span></a></b>
 
@@ -164,6 +194,8 @@ $(window).load(function() {
 	
     </div> <!-- end of footer wrapper -->
 </div> <!-- end of footer -->
+
+
 
 </body>
 </html>
